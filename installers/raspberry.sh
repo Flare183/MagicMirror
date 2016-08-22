@@ -22,14 +22,14 @@ echo -e "\e[0m"
 NODE_TESTED="v5.1.0"
 
 #Determine which Pi is running.
-ARM=$(uname -m) 
+#ARM=$(uname -m) 
 
 #Check the Raspberry Pi version.
-if [ "$ARM" != "armv7l" ]; then
-	echo -e "\e[91mSorry, your Raspberry Pi is not supported."
-	echo -e "\e[91mPlease run MagicMirror on a Raspberry Pi 2 or 3."
-	exit;
-fi
+#if [ "$ARM" != "armv7l" ]; then
+#	echo -e "\e[91mSorry, your Raspberry Pi is not supported."
+#	echo -e "\e[91mPlease run MagicMirror on a Raspberry Pi 2 or 3."
+#	exit;
+#fi
 
 #define helper methods.
 function version_gt() { test "$(echo "$@" | tr " " "\n" | sort -V | head -n 1)" != "$1"; }
